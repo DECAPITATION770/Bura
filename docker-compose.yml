@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  bura-bot:
+    build: .
+    container_name: bura_bot_app
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    # Если боту нужна база данных (например, sqlite), 
+    # volumes помогут сохранить данные при перезагрузке
