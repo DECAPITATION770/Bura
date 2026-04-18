@@ -31,9 +31,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ──────────────────────────────────────────────────────────────────────────────
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"          # ← вставь сюда токен
-# ──────────────────────────────────────────────────────────────────────────────
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 
 # ══════════════════════════════════════════════
